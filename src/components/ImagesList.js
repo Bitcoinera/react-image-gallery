@@ -1,12 +1,13 @@
 import React from 'react'
 
 const ImagesList = (props) => {
-    console.log(props.images)
+    const images = props.images.map( ({id, urls, description}) => 
+    <img key={id} src={urls.small} alt={description}></img>)
+    
     return (
-        <div>
-            <p>Found: {props.images.length}</p>
+        <div style={{'textAlign': 'center'}}>
+            {images}
         </div>
-        
     )
 }
 
