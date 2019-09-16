@@ -1,3 +1,4 @@
+import './ImagesList.css'
 import React from 'react'
 
 const ImagesList = (props) => {
@@ -5,7 +6,7 @@ const ImagesList = (props) => {
     <img key={id} src={urls.small} alt={description}></img>)
     
     return (
-        <div style={{'textAlign': 'center'}}>
+        <div className={'images-list'}>
             {images}
         </div>
     )
